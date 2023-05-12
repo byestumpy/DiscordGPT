@@ -19,7 +19,7 @@
    OPENAI_KEY = "open_ai_key"
    GUILD_ID = guild_id
    ```
-  - Start the bot:
+ - Running the bot:
    ```
    python bot.py
    ```
