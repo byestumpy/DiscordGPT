@@ -34,5 +34,5 @@
 If you would like to contribute, follow these guidelines:
  - Code should be well-documented and easy to understand.
  - New features should be thoroughly tested before submission.
- - Pull requests should be submitted to the "publicdev" branch.
+ - Submit via Discord (Found on https://themysteryinc.net)
 
