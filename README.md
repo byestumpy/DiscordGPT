@@ -15,9 +15,9 @@
    ```
  - Setup a .env file with the following variables:
  ```
- DISCORD_TOKEN = "MTA2MTExODI1OTc0MDU1MzIzNg.GBN96R.WXnnbM3Yt-g1vSBKTxchlyEmuJ1DqQp5gmbHa8"
- OPENAI_KEY = "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"
- GUILD_ID = 1085873557231378523
+ DISCORD_TOKEN = "discord_bot_token"
+ OPENAI_KEY = "open_ai_key"
+ GUILD_ID = guild_id
  ```
   - Start the bot:
  ```
