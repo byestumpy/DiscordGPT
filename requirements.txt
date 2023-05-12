@@ -1,0 +1,6 @@
+discord.py==2.2.2
+discord_py_interactions==4.4.0
+discord_webhook==1.1.0
+openai==0.27.2
+python-dotenv==1.0.0
+Requests==2.30.0
