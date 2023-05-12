@@ -14,15 +14,15 @@
    pip install -r requirements.txt
    ```
  - Setup a .env file with the following variables:
- ```
- DISCORD_TOKEN = "discord_bot_token"
- OPENAI_KEY = "open_ai_key"
- GUILD_ID = guild_id
- ```
+   ```
+   DISCORD_TOKEN = "discord_bot_token"
+   OPENAI_KEY = "open_ai_key"
+   GUILD_ID = guild_id
+   ```
   - Start the bot:
- ```
+   ```
    python bot.py
- ```
+   ```
 # Usage
 
 ## Once the bot is up and running, you can interact with it using the following commands:
