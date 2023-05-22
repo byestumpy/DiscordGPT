@@ -21,7 +21,7 @@ bot = interactions.Client(token=TOKEN)
 openai.api_key = OPENAI_KEY
 
 # DEFINING FUNCTIONS #
-
+# generate_respond function - generates a response based on the "prompt" parameter which is passed when a user uses the /chat command
 async def generate_response(prompt):
     response = openai.Completion.create(
         engine="text-davinci-003",
@@ -34,7 +34,7 @@ async def generate_response(prompt):
 
     message = response.choices[0].text.strip()
     return message
-
+# on_ready function - Confirms the bot is running in the correct guild (server)
 async def on_ready():
     for guild in client.guilds:
         if guild.name == GUILD:
@@ -44,7 +44,7 @@ async def on_ready():
         f'{client.user} is connected to the following guild:\n'
         f'{guild.name}(id: {guild.id})\n'
     )
- 
+# source_send function - responds to the /source command - sends the GitHub
 async def source_send():
     embed_first = DiscordEmbed(
         title='**GitHub**',
@@ -78,7 +78,7 @@ print("Script starting...")
 async def on_message(message):
     if message.author == client.user:
         return
-      
+# /chat command - sends the "prompt" to generate_response function using the discord-py-interactions library
 @bot.command(
     name="chat",
     description="Chat with the AI!",
@@ -91,7 +91,7 @@ async def on_message(message):
         ),
     ],
 )
-
+# /chat function definition - impliments logger to log all prompts and responses
 async def chat(ctx, message: str):
     await ctx.defer()
     logger.info(f"User {ctx.author.name} sent command: {message}")
@@ -100,7 +100,7 @@ async def chat(ctx, message: str):
     chunks = [response[i:i+2000] for i in range(0, len(response), 2000)]
     for chunk in chunks:
         await ctx.send(content=chunk, ephemeral=False)
-        
+# /source command 
 @bot.command(
     name="source",
     description="Bot GitHub",
@@ -108,5 +108,5 @@ async def chat(ctx, message: str):
 async def source(ctx):
     await ctx.defer()
     await source_send()
-   
+# starts the bot when python file is ran
 bot.start()
